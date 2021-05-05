@@ -1,16 +1,66 @@
-<html>
-    <head>
-    <script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+</head>
+<body>
+    <div class="container">
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <form id="interest_calculator">
+            <h1>Simple Interest Calculator</h1>
+            
+            <div class="inputs">
+                <label for="amount">Amount: </label>
+                <input type="number" name="amount" id="amount" value="1000000" required>
+            </div>
+            
+            <div class="inputs">
+                <label for="interest_rate_slider">Interest Rate: </label>
+                <input type="range" min="1" max="100" step="0.1" value="3.5" class="slider" id="interest_rate_slider">
+                <span class="interest_rate_value"><span id="interest_rate_value"></span> %</span>
+            </div>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+            <div class="inputs">
+                <label for="num_yr">No. of Years: </label>
+                <select name="num_yr" id="num_yr">
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="4">4 Years</option>
+                    <option value="5" selected>5 Years</option>
+                    <option value="6">6 Years</option>
+                    <option value="7">7 Years</option>
+                    <option value="8">8 Years</option>
+                    <option value="9">9 Years</option>
+                    <option value="10">10 Years</option>                    
+                </select>
+            </div>
+
+            <div id="submit_div">
+                <button id="btn-submit" type="submit">Compute</button>
+            </div>
+        </form>
+
+        <p id="result" hidden>
+            If you deposit
+            <span id="result_amount"></span>
+            at an interest rate of 
+            <span id="result_interest" ></span> %.
+            You will receive an amount of
+            <span id="result_amount_final" ></span>
+            in the Year
+            <span id="result_year"></span>
+        </p>    
+    
+    </div>
+
+    <div class="footer">
+        <p>&copy; Everyone Can Get Rich</p>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

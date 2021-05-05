@@ -1,4 +1,144 @@
-body {background-color:tan;}
-h1{color:green;}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
 
+.container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  border-radius: 15px;
+  background: #F9F9F9;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#interest_calculator {
+    
+    padding:  15px;
+    margin: 75px 0 0 0;
+    
+  }
+
+  #interest_calculator h1{
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .inputs{
+      margin: 30px 0 30px 0;
+      display: flex;
+      align-items: center;
+  }
+
+  label{
+      font-size: 15px;
+      font-weight: bold;
+      margin-right: 20px;
+      width: 25%;
+  }
+
+  input{
+      width: 75%;
+      float: right;
+      
+  }
+  select{
+    width: 75%;
+    float: right;
+  }
+
+  #interest_rate_slider{
+    width: 60%;
+    float: none;
+    margin-right: 15px;
+    margin-left: 2px;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+ .interest_rate_value{
+   font-size: 16px;
+   font-weight: bold;
+    width: 15%;
+    
+  }
+
+  #submit_div{
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    display: block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #92DE34;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 15px;
+    left: 50%;
+  }
+ 
+  #result{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+ }
