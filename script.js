@@ -10,6 +10,13 @@ interest_slider.oninput = function() {
 function interestCalculator() {
 
     let amount = parseFloat(document.getElementById('amount').value)
+
+    if (amount <= 0){
+        alert('Please Enter a positive amount')
+        document.getElementById('amount').focus()
+        return
+    }
+
     let interest_rate = parseFloat(document.getElementById('interest_rate_slider').value)
     let years = parseInt(document.getElementById('num_yr').value)
 
