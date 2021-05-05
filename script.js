@@ -11,6 +11,12 @@ function interestCalculator() {
 
     let amount = parseFloat(document.getElementById('amount').value)
 
+    if(!amount){
+        alert('Please Enter an amount')
+        document.getElementById('amount').focus()
+        return
+    }
+
     if (amount <= 0){
         alert('Please Enter a positive amount')
         document.getElementById('amount').focus()
